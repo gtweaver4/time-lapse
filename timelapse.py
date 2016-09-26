@@ -16,6 +16,11 @@ def fileSelector():
 def quit(root):
     root.quit()
 
+def export(clip):
+    time = float(entry_length.get())
+    speed = clip.duration/time
+    clip_final = clip.fx(vfx.speedx, speed)
+    clip_final.write_videofile(entry_export.get())
 
 #select video file
 path = fileSelector()
@@ -43,14 +48,16 @@ video_length = Label(root, text = "\nYour clip is " + str(clip.duration) + " Sec
 
 #user entry
 desire_length_label = Label(root, text = "Desired Length:").grid(row = 11, column = 0)
-entry_length = Entry(root, bd = 5, width = 5).grid(row = 12, column = 0)
+entry_length = Entry(root, bd = 5, width = 5)
+entry_length.grid(row = 12, column = 0)
 seconds_label = Label(root, text = "Seconds\n").grid(row = 13, column = 0)
 
 #export name
 file_export_name = Label(root, text = "\nExported File Name:   ").grid(row = 16, column = 0)
-entry_export = Entry(root, bd = 5, width = 20).grid(row = 17, column = 0)
+entry_export = Entry(root, bd = 5, width = 20)
+entry_export.grid(row = 17, column = 0)
 
-export_button = Button(root, text = "Export", command = lambda root = root:quit(root)).grid(row = 18)
+export_button = Button(root, text = "Export", command = lambda clip = clip:export(clip)).grid(row = 18)
 
 #cancel button works with sys.exit() to return to command line
 cancel_button = Button(root, text = "cancel", command= lambda root = root:quit(root)).grid(row = 19)
