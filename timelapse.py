@@ -25,6 +25,8 @@ def quit(root):
 
 #running timelapse 
 def runTimelapseWithPath(path):
+    #these functions have to be defined within the function
+    #because the otherwise the .get() methods to do work
     def export(path):
         clip = VideoFileClip(path)
         time = float(entry_length.get())
@@ -94,6 +96,7 @@ def runTimelapse():
 
 def runTimeLapseWithVideoClip(VideoClip):
     def exportClip(VideoClip):
+        #function in function so .get() method works
         global exportClip
         clip = VideoClip
         time = float(entry_length.get())
@@ -142,5 +145,3 @@ def runTimeLapseWithVideoClip(VideoClip):
 
     #end of tkinter
     root.mainloop()
-
-    

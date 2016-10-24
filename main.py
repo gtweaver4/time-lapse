@@ -3,10 +3,7 @@ import combining_files
 import sys
 from Tkinter import *
 
-def test():
-    print('test')
-
-
+#creates main window
 root = Tk()
 root.title('Video Editor')
 root.geometry('400x500')

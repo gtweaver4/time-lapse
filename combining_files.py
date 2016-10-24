@@ -7,6 +7,7 @@ clip_array = []
 path_array = []
 i = 0
 
+#creates the combining files gui
 def combiningFiles(cal):
     root = Tk()
     root.title("Combining Clips")
@@ -26,7 +27,7 @@ def combiningFiles(cal):
     root.mainloop()
     sys.exit()
 
-
+#this adds the video import into an array and also the path into an array
 def importVideo():
     global i
     path_array.append(timelapse.fileSelector())
@@ -34,7 +35,8 @@ def importVideo():
     print("File: " + path_array[i] + " added")
     i += 1
 
-#is combined and lapsed
+#if the video is combined and lapsed (CAL) then it goes to timelapse process
+#if not CAL then it just writes the file of the combined video clips
 def exportVideo(isCAL):
     global export_name
     final_clip = concatenate_videoclips(clip_array)
