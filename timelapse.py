@@ -1,6 +1,6 @@
 import sys
-from Tkinter import *
-from tkFileDialog import askopenfilename
+from tkinter import *
+from tkinter import filedialog
 from moviepy.editor import *
 import subprocess
 import os
@@ -8,7 +8,7 @@ import os
 #creates the file selection gui
 def fileSelector():
     Tk().withdraw()
-    return askopenfilename()
+    return filedialog.askopenfilename()
 
 #saves path for audio file
 def get_audio_path():
