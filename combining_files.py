@@ -1,6 +1,6 @@
 import timelapse
 from moviepy.editor import *
-from tkinter import *
+from Tkinter import *
 import sys
 
 clip_array = []

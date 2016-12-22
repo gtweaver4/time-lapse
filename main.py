@@ -1,7 +1,7 @@
 import timelapse
 import combining_files
 import sys
-from tkinter import *
+from Tkinter import *
 
 #creates main window
 root = Tk()

@@ -1,6 +1,6 @@
 import sys
-from tkinter import *
-from tkinter import filedialog
+from Tkinter import *
+from tkFileDialog import askopenfilename
 from moviepy.editor import *
 import subprocess
 import os
@@ -8,7 +8,7 @@ import os
 #creates the file selection gui
 def fileSelector():
     Tk().withdraw()
-    return filedialog.askopenfilename()
+    return askopenfilename()
 
 #saves path for audio file
 def get_audio_path():
@@ -26,7 +26,7 @@ def quit(root):
 #running timelapse 
 def runTimelapseWithPath(path):
     #these functions have to be defined within the function
-    #because the otherwise the .get() methods to do work
+    #because the otherwise the https://github.com/gtweaver4/time-lapse.git.get() methods to do work
     def export(path):
         clip = VideoFileClip(path)
         time = float(entry_length.get())
