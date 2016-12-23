@@ -44,5 +44,5 @@ def exportVideo(isCAL):
     if(isCAL):
         timelapse.runTimeLapseWithVideoClip(final_clip)
     else:
-        final_clip.write_videofile("combined_testing.mp4")
+        final_clip.write_videofile(export_name)
         sys.exit()
