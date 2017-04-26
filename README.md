@@ -15,11 +15,9 @@ when the scene changes.
 
 This program has only been tested on linux so far. I assume it will not function
 properly in windows as it does call the shell to use ffmpeg to handle audio. 
-Maybe this will work with windows anniversary edition with ubuntu's shell?
 It has been tested mainly using videos of ~60 seconds in length for quick testing,
-but I did test with one 3 hour long video. While it did work, the rendering took
+but I did test with one 3 and 4 hour long video. While it did work, the rendering took
 ~30 minutes which is to be expected from larger files needing to be edited.
  
-
 There is a similar feature in adobe premiere pro that has inspired
 this program.
